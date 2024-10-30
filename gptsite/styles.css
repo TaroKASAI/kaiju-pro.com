@@ -1,0 +1,573 @@
+
+/* リセットCSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 全体のスタイル */
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    line-height: 1.6;
+    color: #222;
+    background-color: #fff;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-full {
+    width: 100%;
+    margin: 0 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+/* お問い合わせボタン */
+.contact-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #e60033;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.contact-button:hover {
+    background-color: #cc0033;
+}
+
+/* ヘッダー */
+.header {
+    color: #222;
+    text-align: center;
+    padding: 80px 0 30px;
+}
+
+.top-message {
+    max-width: 825px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.top-message h1 {
+    font-size: 4em;
+    margin-bottom: 0px;
+}
+
+.top-message h2 {
+    font-size: 5.0em;
+    margin-bottom: 30px;
+}
+
+.top-message p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+.top-message p::after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+}
+@media (max-width: 768px) {
+    .header {
+        padding: 30px 0;
+        margin-top: 50px;
+    }
+}
+@media (max-width: 480px) {
+    .header .second-half{
+        display: none;
+    }
+    .header {
+        padding: 30px 0 0px;
+    }
+}
+
+/* 作品事例セクション */
+.works {
+    padding: 30px 0 60px;
+    background-color: #f9f9f9;
+}
+
+@media (max-width: 480px) {
+    .works {
+        padding: 10px 0 0px;
+    }
+}
+
+.works h3 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+.works-slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.works-slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 20%; /* PCで5枚表示 */
+    padding: 0 5px;
+}
+
+.slide img {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer;
+}
+
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255,255,255,0.8);
+    border: none;
+    color: #333;
+    font-size: 2em;
+    padding: 10px;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+/* モーダル（拡大表示） */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 20;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 80%;
+    width: 100%;
+    text-align: center;
+}
+
+.lightbox-content img {
+    max-width: 100%;
+    max-height: 80vh;
+}
+
+.lightbox .close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.lightbox .arrow {
+    background-color: transparent;
+    color: #fff;
+    font-size: 3em;
+}
+
+#lightbox-left {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#lightbox-right {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 1280px) {
+    .slide {
+        flex: 0 0 27%; 
+    }
+
+}
+
+@media (max-width: 960px) {
+    .slide {
+        flex: 0 0 35%; /* タブレットで3枚表示 */
+    }
+
+}
+
+@media (max-width: 768px) {
+    .slide {
+        flex: 0 0 55%; 
+    }
+
+    .top-message h1 {
+        font-size: 3em;
+    }
+
+    .top-message h2 {
+        font-size: 3.8em;
+    }
+}
+
+@media (max-width: 480px) {
+    .slide {
+        flex: 0 0 80%; /* スマートフォンで1枚表示 */
+    }
+}
+
+
+/* アーティストからのメッセージ */
+.artist-message {
+    padding: 60px 0;
+}
+
+/* セクションタイトル */
+.artist-message h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+
+/* コンテナ中央寄せ */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* アーティストプロフィールのレイアウト */
+.artist-profile {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center; /* 中央寄せ */
+}
+
+/* 写真部分 */
+.artist-photo {
+    flex: 0 0 300px;
+    text-align: center;
+}
+
+.artist-photo img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* 詳細部分 */
+.artist-details {
+    flex: 1;
+    margin-left: 40px;
+    max-width: 600px;
+}
+
+.artist-details h4 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+}
+
+.artist-details p.biography {
+    font-size: 1.2em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.artist-details p.message {
+    font-size: 1.2em;
+    line-height: 1.8;
+    text-align: justify;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 1024px) {
+    .artist-details {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .artist-profile {
+        flex-direction: column;
+        align-items: center;
+    }
+    .artist-photo img {
+        width: 70%;
+    }
+    .artist-details {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .artist-message {
+        padding: 20px 0;
+    }
+}
+
+
+/* 制作の流れと料金体系 */
+.process {
+    padding: 60px 0;
+    background-color: #f9f9f9;
+}
+
+.process h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+.process-content {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.process-text {
+    
+    flex: 1 1 35%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+}
+
+.step-icon {
+    flex: 0 0 60px;
+    margin-right: 20px;
+}
+
+.step-icon img {
+    width: 25px;
+    height: 25px;
+}
+
+.step-content p {
+    font-size: 1.2em;
+    margin: 0;
+}
+
+.pricing-item {
+    flex: 1 1 35%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 500px;
+    text-align: center;
+}
+
+.pricing-item h4 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+}
+
+.pricing-item .price {
+    font-size: 2em;
+    color: #e60033;
+    margin: 10px 0;
+}
+
+.pricing-item hr {
+    margin: 20px 0;
+    border: none;
+    border-top: 1px solid #ddd;
+}
+
+.pricing-item ul {
+    list-style: none;
+    padding: 0;
+}
+
+.pricing-item li {
+    font-size: 1em;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing-item li span {
+    color: #333;
+    font-weight: bold;
+}
+
+/* スマートフォンでは「制作の流れ」を非表示にする */
+@media (max-width: 768px) {
+    .process-content {
+        flex-direction: column;
+    }
+    .process-text{
+        display: none;
+    }
+    .pricing-item {
+        flex: none;
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
+/* お問い合わせフォーム */
+.contact {
+    padding: 60px 0;
+}
+
+.contact h3 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2em;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    font-size: 20px;
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    background-color: #e60033;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #cc0033;
+}
+
+/* フッター */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* サンクスメッセージ */
+.thanks-message {
+    padding: 80px 0;
+    text-align: center;
+}
+
+.thanks-message h3 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+}
+
+.thanks-message p {
+    font-size: 1.2em;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: left; /* 左揃えに変更 */
+    max-width: 800px; /* テキストの横幅を制限 */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.thanks-message .kome {
+    color: #cb0808
+}
+
+.back-to-home {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background-color: #e60033;
+    color: #fff;
+    border-radius: 4px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.back-to-home:hover {
+    background-color: #cc0033;
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .thanks-message h3 {
+        font-size: 2em;
+    }
+
+    .thanks-message p {
+        font-size: 1em;
+        padding: 0 20px; /* モバイルでの左右の余白を調整 */
+    }
+}

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>電脳漫画制作 | Kaiju-Pro</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="【業界最高水準】最新技術による高度なキャラクター表現で読者を魅了するKaiju-Proの漫画制作サービス。お問い合わせはこちらから。">
+    <!-- フォントとアイコンの読み込み -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- お問い合わせボタン -->
+    <a href="#contact" class="contact-button">お問い合わせ</a>
+
+    <!-- ヘッダー -->
+    <header class="header">
+        <div class="container">
+            <div class="top-message">
+                <h1>電脳漫画制作</h1>
+                <h2>Kaiju-Pro</h2>
+                <p>
+                    業界最高水準の高度なキャラクター表現により、読者を引き込む魅力を提供します。<br>
+                    最新のディープラーニング技術や生成モデルを駆使し、細部までこだわった迅速な納品を実現。<br>
+                    <span class="second-half">価格最適化で、コストパフォーマンスを向上させます。柔軟なカスタマイズにより、あらゆるニーズに対応。<br>
+                    物語をビジュアルで豊かに表現し、メッセージを深く響かせます。</span>
+                </p>
+            </div>
+            
+        </div>
+    </header>
+
+
+    <!-- 作品事例セクション -->
+    <section class="works">
+        <div class="container-full">
+            <h3>作品事例</h3>
+            <div class="works-slider-container">
+                <button class="arrow left-arrow">&#9664;</button>
+                <div class="works-slider">
+                    <!-- 画像を動的に追加 -->
+                </div>
+                <button class="arrow right-arrow">&#9654;</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- 拡大表示用のモーダル -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <span class="close">&times;</span>
+            <button class="arrow left-arrow" id="lightbox-left">&#9664;</button>
+            <img id="lightbox-img" src="" alt="拡大画像">
+            <button class="arrow right-arrow" id="lightbox-right">&#9654;</button>
+        </div>
+    </div>
+
+
+
+    <!-- アーティストからのメッセージ -->
+    <section class="artist-message">
+        <div class="container">
+            <h3 id="message-from-artist">制作陣からのメッセージ</h3>
+            <div class="artist-profile">
+                <div class="artist-photo">
+                    <img src="images/artist.png" alt="アーティスト写真">
+                </div>
+                <div class="artist-details">
+                    <h4>川口和</h4>
+                    <p class="biography">
+                        漫画家。代表作に『神様になりたい男』『Rabbitman』など。
+                    </p>
+                    <p class="message">
+                        漫画制作は、生成AI技術の導入によって、従来の制約から解放され、これまでと次元の異なる、新たな表現を獲得しました。<br>
+                        制作スタッフ一同、漫画表現に対する情熱をより熱く燃やし、お客様に最良のプロダクトを提供してまいります。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- 制作の流れと料金体系 -->
+    <section class="process">
+        <div class="container">
+            <div class="process-content">
+                <!-- 制作の流れ -->
+                <div class="process-text">
+                    <h3>制作の流れ</h3>
+                    <!-- ステップ1 -->
+                    <div class="step">
+                        <div class="step-icon">
+                            <img src="icons/mail.png" alt="お問い合わせ">
+                        </div>
+                        <div class="step-content">
+                            <p>1 お問い合わせ</p>
+                        </div>
+                    </div>
+                    <!-- ステップ2 -->
+                    <div class="step">
+                        <div class="step-icon">
+                            <img src="icons/sita.png" alt="ヒアリングとお見積り">
+                        </div>
+                        <div class="step-content">
+                            <p>2 ヒアリングとお見積り</p>
+                        </div>
+                    </div>
+                    <!-- ステップ3 -->
+                    <div class="step">
+                        <div class="step-icon">
+                            <img src="icons/sita.png" alt="制作開始">
+                        </div>
+                        <div class="step-content">
+                            <p>3 制作開始</p>
+                        </div>
+                    </div>
+                    <!-- ステップ4 -->
+                    <div class="step">
+                        <div class="step-icon">
+                            <img src="icons/sita.png" alt="修正・調整">
+                        </div>
+                        <div class="step-content">
+                            <p>4 修正・調整</p>
+                        </div>
+                    </div>
+                    <!-- ステップ5 -->
+                    <div class="step">
+                        <div class="step-icon">
+                            <img src="icons/kaiju.png" alt="完成">
+                        </div>
+                        <div class="step-content">
+                            <p>5 完成</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- 料金体系 -->
+                <div class="pricing-item">
+                    <h3>料金体系</h3>
+                    <h4>基本料金</h4>
+                    <p>ページ当たり</p>
+                    <p class="price">¥20,000~</p>
+                    <hr>
+                    <h4>オプション</h4>
+                    <ul>
+                        <li>キャラクター作成<span>+¥50,000~</span></li>
+                        <li>ストーリー作成<span>+¥30,000~</span></li>
+                        <li>その他ご相談ください</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- お問い合わせ -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h3>お問い合わせ</h3>
+            <form action="https://docs.google.com/forms/u/2/d/e/1FAIpQLSdcdwr49kzprkz67yWdZ6U30k4SfzbI4jtH-M6AQbYUwZlSQg/formResponse" method="post" target="hidden_iframe" onsubmit="submitted=true" id="contact-form">
+                <div class="form-group">
+                    <label for="name">お名前（必須）:</label>
+                    <input type="text" id="name" name="entry.1337141711" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="company">ご所属:</label>
+                    <input type="text" id="company" name="entry.1060114904">
+                </div>
+
+                <div class="form-group">
+                    <label for="email">メールアドレス（必須）:</label>
+                    <input type="email" id="email" name="entry.551718190" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">電話番号（必須）:</label>
+                    <input type="tel" id="phone" name="entry.796673057" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="inquiry">お問い合わせ内容（必須）:</label>
+                    <select id="inquiry" name="entry.872461414" required>
+                        <option value="">選択してください</option>
+                        <option value="見積もり依頼">見積もり依頼</option>
+                        <option value="サービスに関する質問">サービスに関する質問</option>
+                        <option value="コラボレーションの提案">コラボレーションの提案</option>
+                        <option value="その他">その他</option>
+                    </select>
+                </div>
+
+                <div class="form-group" id="other-inquiry" style="display:none;">
+                    <label for="other">詳細:</label>
+                    <textarea id="other" name="entry.72831374"></textarea>
+                </div>
+
+                <button type="submit">送信</button>
+            </form>
+            
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted){window.location='thanks.html';}"></iframe>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Kaiju-Pro. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
